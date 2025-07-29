@@ -1,0 +1,20 @@
+{
+    "name": "A Feedback Hub",
+    "short_name": "Afoozo Digi Hub",
+    "start_url": "https://crm.afoozo.com",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FFFFFF",
+    "icons": [
+      {
+        "src": "./alogo_192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "./alogo_512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

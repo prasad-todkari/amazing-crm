@@ -1,0 +1,237 @@
+import { useState, useEffect } from 'react';
+import { addSite, editSite, getAllSites } from '../../services/siteServices';
+import { ToastSuccess, ToastError } from '../../components/common/Toast';
+import SiteModal from '../../components/master/siteModal';
+import ConfirmationModal from '../../components/common/ConfirmationModal';
+import { getAllCategories } from '../../services/masterServices';
+
+export default function SiteMaster() {
+  const [sites, setSites] = useState([]);
+  const [refresh, setRefresh] = useState(false);
+  const [modal, setModal] = useState({ open: false, mode: 'add', site: null });
+  const [toastMessage, setToastMessage] = useState('');
+  const [toastError, setToastError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [confirmationModal, setConfirmationModal] = useState(false);
+  const [message, setMessage] = useState('');
+  const [siteId, setSiteId] = useState(null);
+  const [categories, setCategories] = useState([]);
+
+  const [formSite, setFormSite] = useState({
+    name: '',
+    isActive: true,
+    contactName: '',
+    contactNo: '',
+    category: '',
+    email: '',
+    address: '',
+    city: ''
+  });
+
+  useEffect(() => {
+    setLoading(true);
+    const fetchSites = async () => {
+      const response = await getAllSites();
+      setSites(response.data);
+    };
+    fetchSites();
+
+    const fetchCategories = async () => {
+      const catResponse = await getAllCategories();
+      setCategories(catResponse.data);
+    }
+    fetchCategories();
+    setLoading(false);
+  }, [refresh]);
+
+  const openAddModal = () => {
+    setFormSite({
+      name: '',
+      isActive: true,
+      contactName: '',
+      contactNo: '',
+      category: '',
+      email: '',
+      address: '',
+      city: ''
+    });
+    setModal({ open: true, mode: 'add', site: null });
+  };
+
+  const openEditModal = (site) => {
+    setFormSite({
+      id: site.site_id,
+      name: site.site_name || '',
+      isActive: site.isactive,
+      contactName: site.contact_person || '',
+      contactNo: site.contactno || '',
+      category: site.category_id || '',
+      email: site.email || '',
+      address: site.address || '',
+      city: site.city || ''
+    });
+    setModal({ open: true, mode: 'edit', site });
+  };
+
+  const handleSave = async () => {
+    setLoading(true);
+    if (!formSite.name.trim()) return;
+
+    try {
+      if (modal.mode === 'add') {
+        const res = await addSite(formSite);
+        // setSites([...sites, res.data]);
+        console.log('Site added:', res.message);
+        setToastMessage('Site added successfully!');
+      } else {
+        const res = await editSite(formSite);
+        console.log('Site updated:', res.message);
+        // setSites(sites.map((s) => (s.id === modal.site.id ? res.data : s)));
+        setToastMessage('Site updated successfully!');
+      }
+    } catch (err) {
+      console.error(err);
+      setToastError('Something went wrong.');
+    }
+
+    setModal({ open: false, mode: 'add', site: null });
+    setFormSite({
+      name: '',
+      isActive: true,
+      contactName: '',
+      contactNo: '',
+      email: '',
+      address: '',
+      city: ''
+    });
+    setLoading(false);
+    // Refresh the site list
+    setRefresh(prev => !prev);
+  };
+
+
+  const handleDelete = (siteId) => {
+    console.log('Deleting site with ID:', siteId);
+    setSites(sites.filter((s) => s.siteId !== siteId));
+    setToastError('Site deleted.');
+  };
+
+  return (
+    <div className="p-4 relative">
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-lg font-semibold text-gray-800">Site Master</h2>
+        <button
+          onClick={openAddModal}
+          className="bg-slate-600 text-white px-4 py-1.5 rounded text-sm hover:bg-slate-100 hover:text-slate-600 transition duration-200"
+        >
+          + Add Site
+        </button>
+      </div>
+
+      <table className="w-full text-sm shadow rounded">
+        <thead className="bg-gray-100">
+          <tr>
+            <th className="px-3 py-2 text-left">Name</th>
+            <th className="px-3 py-2 text-left">Category</th>
+            <th className="px-3 py-2 text-left">Status</th>
+            <th className="px-3 py-2 text-left">Manager</th>
+            <th className="px-3 py-2 text-left">Contact No</th>
+            <th className="px-3 py-2 text-left">Email</th>
+            <th className="px-3 py-2 text-left">Actions</th>
+          </tr>
+        </thead>
+        <tbody className='bg-white'>
+          {sites && sites.map((site) => (
+            <tr key={site.site_id} className="border-b hover:bg-gray-50">
+              <td className="px-3 py-2">{site.site_name}</td>
+              <td className="px-3 py-2">
+                {site.category_name || 'N/A'}
+              </td>
+              <td className="px-3 py-2">
+                <span
+                  className={`px-2 py-0.5 text-xs rounded-full ${site.isactive
+                    ? 'bg-green-100 text-green-800'
+                    : 'bg-red-100 text-red-800'
+                    }`}
+                >
+                  {site.isactive ? 'Active' : 'Inactive'}
+                </span>
+              </td>
+              <td className="px-3 py-2">
+                {site.contact_person || 'N/A'}
+              </td>
+              <td className="px-3 py-2">
+                {site.contactno || 'N/A'}
+              </td>
+              <td className="px-3 py-2">
+                {site.email || 'N/A'}
+              </td>
+              <td className="px-3 py-2 space-x-2">
+                <button
+                  onClick={() => openEditModal(site)}
+                  className="text-blue-600 hover:underline text-sm"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => {
+                    setConfirmationModal(true);
+                    setMessage('Are you sure you want to delete this site?');
+                    setSiteId(site.site_id);
+                  }}
+                  className="text-red-600 hover:underline text-sm"
+                >
+                  Delete Site
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* Modal */}
+      {modal.open && (
+        <SiteModal
+          open={modal.open}
+          mode={modal.mode}
+          formSite={formSite}
+          categoryList={categories}
+          setFormSite={setFormSite}
+          onClose={() => setModal({ open: false, mode: 'add', site: null })}
+          onSave={handleSave}
+          loading={loading}
+        />
+
+      )}
+
+      {/* Confirmation Modal */}
+      {confirmationModal && (
+        <ConfirmationModal
+          show={confirmationModal}
+          handleClose={() => setConfirmationModal(false)}
+          message={message}
+          handleApprove={() => {
+            handleDelete(siteId);
+            setConfirmationModal(false);
+          }}
+
+        />
+      )}
+
+      {/* Toast */}
+      {toastMessage && (
+        <ToastSuccess message={toastMessage} onClose={() => setToastMessage('')} />
+      )}
+      {toastError && (
+        <ToastError message={toastError} onClose={() => setToastError('')} />
+      )}
+
+      {loading && (
+        <div className="fixed inset-0 bg-white bg-opacity-60 flex items-center justify-center z-50">
+          <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-slate-600"></div>
+          <span className="ml-4 text-slate-700 font-medium">Loading...</span>
+        </div>
+      )}
+    </div>
+  );
+}

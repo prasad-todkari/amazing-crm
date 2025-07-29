@@ -1,0 +1,372 @@
+2025-07-05T12:10:51.041Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: 
+2025-07-05T12:12:05.068Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: 
+2025-07-05T12:12:55.838Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: 
+2025-07-05T12:17:44.861Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: 
+2025-07-05T12:19:30.362Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: 
+2025-07-05T12:19:55.574Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: 
+2025-07-05T12:22:33.091Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: 
+2025-07-05T12:24:02.391Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: 
+2025-07-05T12:26:02.840Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: Something went wrong
+2025-07-05T12:26:45.784Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: Something went wrong
+2025-07-05T12:27:13.149Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: Something went wrong
+2025-07-05T12:50:29.291Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: res is not defined
+2025-07-05T13:17:07.821Z - [ERROR] - Login attempt failed for username: prasad.todkari@afoozo.com with error: pass is not defined
+2025-07-05T13:21:53.652Z - [ERROR] - Login error for prasad.todkari@afoozo.com: secretOrPrivateKey must have a value
+2025-07-05T13:23:48.871Z - [ERROR] - Login error for prasad.todkari@afoozo.com: secretOrPrivateKey must have a value
+2025-07-05T13:24:41.290Z - [ERROR] - Login error for prasad.todkari@afoozo.com: secretOrPrivateKey must have a value
+2025-07-05T13:25:55.591Z - [ERROR] - Login error for prasad.todkari@afoozo.com: secretOrPrivateKey must have a value
+2025-07-05T13:26:44.878Z - [ERROR] - Login error for prasad.todkari@afoozo.com: secretOrPrivateKey must have a value
+2025-07-05T13:27:30.818Z - [ERROR] - Login error for prasad.todkari@afoozo.com: secretOrPrivateKey must have a value
+2025-07-05T13:28:09.467Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-05T13:28:56.408Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-05T13:37:23.677Z - [ERROR] - Login failed: No such user undefined
+2025-07-05T13:37:23.678Z - [ERROR] - Login error for undefined: Invalid User
+2025-07-05T13:38:26.467Z - [ERROR] - Login failed: No such user undefined
+2025-07-05T13:38:26.468Z - [ERROR] - Login error for undefined: Invalid User
+2025-07-05T13:41:13.955Z - [ERROR] - Login failed: No such user [object Object]
+2025-07-05T13:41:13.955Z - [ERROR] - Login error for [object Object]: Invalid User
+2025-07-05T13:42:28.996Z - [ERROR] - Login failed: No such user [object Object]
+2025-07-05T13:42:28.997Z - [ERROR] - Login error for [object Object]: Invalid User
+2025-07-05T13:43:09.143Z - [ERROR] - Login failed: No such user [object Object]
+2025-07-05T13:43:09.143Z - [ERROR] - Login error for [object Object]: Invalid User
+2025-07-05T13:44:06.132Z - [ERROR] - Login failed: No such user [object Object]
+2025-07-05T13:44:06.133Z - [ERROR] - Login error for [object Object]: Invalid User
+2025-07-05T13:44:46.165Z - [ERROR] - Login failed: No such user [object Object]
+2025-07-05T13:44:46.165Z - [ERROR] - Login error for [object Object]: Invalid User
+2025-07-05T13:47:19.757Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-05T13:51:27.503Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-05T13:55:58.527Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-05T13:57:01.420Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-05T13:57:50.633Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-05T14:01:04.651Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-05T14:04:30.164Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-05T17:50:33.610Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-05T20:09:30.768Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-05T20:30:40.929Z - [error: column "name" of relation "sites" does not exist] - Error adding site:
+2025-07-05T20:36:21.045Z - [error: column "isactive" of relation "sites" does not exist] - Error adding site:
+2025-07-06T06:01:23.424Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-06T06:05:30.694Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-06T06:33:00.424Z - [error: column "name" of relation "sites" does not exist] - Error editing site:
+2025-07-06T06:36:08.146Z - [TypeError: Cannot read properties of undefined (reading 'trim')] - Error editing site:
+2025-07-06T06:41:47.790Z - [TypeError: Cannot destructure property 'site_name' of 'siteData' as it is undefined.] - Error editing site:
+2025-07-06T07:03:02.672Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-06T07:05:14.870Z - [ReferenceError: site_name is not defined] - Error editing site:
+2025-07-06T07:05:44.639Z - [ReferenceError: site_name is not defined] - Error editing site:
+2025-07-06T08:27:42.661Z - [error: numeric field overflow] - Error editing site:
+2025-07-06T09:28:24.949Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-08T09:33:26.476Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-08T10:31:34.327Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-08T11:26:42.261Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-08T11:36:40.034Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-08T11:47:51.933Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-08T12:46:29.793Z - [ERROR] - Login failed: Invalid password for prasad.todkari@afoozo.com
+2025-07-08T12:46:29.794Z - [ERROR] - Login error for prasad.todkari@afoozo.com: Invalid User
+2025-07-08T12:46:34.126Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-09T12:40:39.911Z - [ERROR] - Login failed: Invalid password for prasad.todkari@afoozo.com
+2025-07-09T12:40:39.911Z - [ERROR] - Login error for prasad.todkari@afoozo.com: Invalid User
+2025-07-09T12:40:43.020Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-09T12:43:50.906Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-09T13:30:14.359Z - [error: column "user_id" does not exist] - Error fetching categories:
+2025-07-09T13:31:28.961Z - [error: column "user_id" does not exist] - Error fetching categories:
+2025-07-09T13:33:15.207Z - [error: column "user_id" does not exist] - Error fetching categories:
+2025-07-09T13:33:43.225Z - [error: column "user_id" does not exist] - Error fetching categories:
+2025-07-09T13:33:48.192Z - [error: column "user_id" does not exist] - Error fetching categories:
+2025-07-09T13:35:35.456Z - [ERROR] - Login failed: Invalid password for prasad.todkari@afoozo.com
+2025-07-09T13:35:35.457Z - [ERROR] - Login error for prasad.todkari@afoozo.com: Invalid User
+2025-07-09T13:35:41.576Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-09T13:43:43.233Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-09T13:56:35.018Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-09T14:01:13.777Z - [ERROR] - Login failed: Invalid password for prasad.todkari@afoozo.com
+2025-07-09T14:01:13.777Z - [ERROR] - Login error for prasad.todkari@afoozo.com: Invalid User
+2025-07-09T14:01:18.027Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-09T15:07:08.207Z - [ERROR] - Login error for prasad.todkari@afoozo.com: Invalid User
+2025-07-09T15:07:08.207Z - [ERROR] - Login failed: Invalid password for prasad.todkari@afoozo.com
+2025-07-09T15:07:12.300Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-09T15:09:54.344Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-09T17:27:14.951Z - [Info] - Fetched all users undefined
+2025-07-09T17:28:16.024Z - [Info] - Fetched all users undefined
+2025-07-09T17:28:20.194Z - [error] - Error editing site:Error: No site found with the given ID
+2025-07-09T17:28:20.205Z - [Error] - Error editing site: No site found with the given ID
+2025-07-09T17:28:26.047Z - [Info] - Fetched all users undefined
+2025-07-09T17:31:32.640Z - [error] - Error editing site:Error: No site found with the given ID
+2025-07-09T17:31:32.654Z - [Error] - Error editing site: No site found with the given ID
+2025-07-09T17:33:28.192Z - [Info] - Fetched all users undefined
+2025-07-09T17:33:38.164Z - [error] - Error editing user:error: column "id" does not exist
+2025-07-09T17:33:38.169Z - [Error] - Error editing user: column "id" does not exist
+2025-07-09T17:36:37.028Z - [Info] - Fetched all users undefined
+2025-07-09T17:37:30.821Z - [error] - Error editing user:Error: No user found with the given ID
+2025-07-09T17:37:30.825Z - [Error] - Error editing user: No user found with the given ID
+2025-07-09T17:38:06.348Z - [Info] - Fetched all users undefined
+2025-07-09T17:38:14.498Z - [Info] - User Prasad Todkari updated successfully by undefined
+2025-07-09T17:38:14.512Z - [Info] - Fetched all users undefined
+2025-07-09T17:38:24.010Z - [Info] - User Prasad Todkari updated successfully by undefined
+2025-07-09T17:38:24.033Z - [Info] - Fetched all users undefined
+2025-07-09T17:41:33.744Z - [Info] - User Prasad Todkari updated successfully by undefined
+2025-07-09T17:41:33.775Z - [Info] - Fetched all users undefined
+2025-07-09T17:42:42.322Z - [Info] - Fetched all users undefined
+2025-07-09T17:42:49.455Z - [Info] - User Prasad Todkari updated successfully by undefined
+2025-07-09T17:42:49.470Z - [Info] - Fetched all users undefined
+2025-07-09T17:43:25.491Z - [Info] - Fetched all users undefined
+2025-07-09T17:43:30.161Z - [Info] - User Prasad Todkari updated successfully by undefined
+2025-07-09T17:43:30.177Z - [Info] - Fetched all users undefined
+2025-07-09T17:45:13.322Z - [Info] - Fetched all users undefined
+2025-07-09T17:45:18.309Z - [Info] - User Prasad Todkari updated successfully by undefined
+2025-07-09T17:45:18.329Z - [Info] - Fetched all users undefined
+2025-07-09T17:47:17.698Z - [error] - Error adding user:ReferenceError: bcrypt is not defined
+2025-07-09T17:47:17.711Z - [Error] - Error adding user: bcrypt is not defined
+2025-07-09T17:48:45.662Z - [Info] - Fetched all users undefined
+2025-07-09T17:49:03.987Z - [error] - Error adding user:error: column "password" of relation "users" does not exist
+2025-07-09T17:49:03.996Z - [Error] - Error adding user: column "password" of relation "users" does not exist
+2025-07-09T17:49:38.891Z - [Info] - Fetched all users undefined
+2025-07-09T17:50:25.050Z - [Info] - User undefined added a new user: Ravi Manchandani
+2025-07-09T17:50:25.066Z - [Info] - Fetched all users undefined
+2025-07-10T11:12:27.885Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:13:16.723Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:13:27.397Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:14:48.154Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:15:09.785Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:23:45.526Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:27:28.949Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:29:25.050Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:32:36.717Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:34:02.777Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:34:24.698Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:35:30.975Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:36:42.821Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:39:36.571Z - [Info] - Fetched all sites by undefined
+2025-07-10T11:45:34.932Z - [ERROR] - Error while fetching questions
+2025-07-10T11:54:52.302Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:23:40.580Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:35:01.138Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:35:57.825Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:36:07.692Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:36:31.371Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:37:02.177Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:37:54.777Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:39:00.840Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:39:50.742Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:39:54.916Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:40:06.601Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:41:03.638Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:41:32.693Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:42:05.386Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:42:48.189Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:43:27.725Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:44:20.200Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:45:02.527Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:48:53.755Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:49:29.249Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:49:54.451Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:50:18.963Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:50:23.515Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:50:43.583Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:50:46.433Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:50:48.182Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:50:50.453Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:51:06.645Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:51:40.115Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:51:47.696Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:52:05.525Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:53:45.763Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:53:56.442Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:54:07.936Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:55:24.981Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:56:45.728Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:56:55.594Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:57:04.370Z - [Info] - Fetched all sites by undefined
+2025-07-10T12:57:08.691Z - [Info] - Fetched all sites by undefined
+2025-07-10T13:07:29.754Z - [Info] - Fetched all sites by undefined
+2025-07-10T13:08:32.361Z - [Info] - Fetched all sites by undefined
+2025-07-10T17:44:19.038Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-10T17:44:19.153Z - [Info] - Fetched all sites by undefined
+2025-07-10T17:44:19.201Z - [Info] - Fetched all categories by undefined
+2025-07-10T17:44:24.318Z - [Info] - Fetched all sites by undefined
+2025-07-10T17:44:24.320Z - [Info] - Fetched all categories by undefined
+2025-07-10T17:44:27.542Z - [Info] - Fetched all users undefined
+2025-07-10T17:44:28.970Z - [Info] - Fetched all sites by undefined
+2025-07-10T17:44:28.972Z - [Info] - Fetched all categories by undefined
+2025-07-10T17:44:29.924Z - [Info] - Fetched all users undefined
+2025-07-10T17:46:02.062Z - [Info] - Fetched all users undefined
+2025-07-10T17:46:05.970Z - [Info] - Fetched all users undefined
+2025-07-10T17:46:39.361Z - [Info] - Fetched all sites by undefined
+2025-07-10T17:55:29.109Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:00:44.233Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:01:51.812Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:02:09.601Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:02:45.247Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:08:30.489Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:08:38.057Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:12:40.018Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:20:12.857Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:25:33.827Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:27:34.843Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:28:58.860Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:31:31.839Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:32:56.297Z - [Info] - Fetched all sites by undefined
+2025-07-10T18:34:16.872Z - [Info] - Fetched all sites by undefined
+2025-07-11T07:11:27.989Z - [Info] - Fetched all sites by undefined
+2025-07-11T09:32:33.986Z - [Info] - Fetched all sites by undefined
+2025-07-11T09:32:39.782Z - [Info] - Fetched all sites by undefined
+2025-07-11T09:32:59.338Z - [Info] - Fetched all sites by undefined
+2025-07-11T09:33:06.922Z - [Info] - Fetched all sites by undefined
+2025-07-11T09:36:27.459Z - [Info] - Fetched all sites by undefined
+2025-07-11T09:37:37.917Z - [Info] - Fetched all sites by undefined
+2025-07-11T09:37:53.336Z - [Info] - Fetched all sites by undefined
+2025-07-11T09:38:26.506Z - [Info] - Fetched all sites by undefined
+2025-07-11T09:43:02.403Z - [Info] - Fetched all sites by undefined
+2025-07-11T09:43:44.355Z - [Info] - Fetched all sites by undefined
+2025-07-11T09:43:55.416Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:00:36.665Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:11:25.429Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:11:35.363Z - [INFO] - Error While Updating Selected Question by Prasad Todkari
+2025-07-11T10:16:17.424Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:21:56.398Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:22:04.344Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:22:15.406Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:24:57.041Z - [INFO] - Error While Updating Selected Question by Prasad Todkari
+2025-07-11T10:32:27.835Z - [INFO] - Site question list updated by Prasad Todkari for site 1
+2025-07-11T10:41:39.709Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:45:17.737Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:45:37.239Z - [INFO] - Site question list updated by Prasad Todkari for site 1
+2025-07-11T10:47:00.809Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:47:04.780Z - [INFO] - Site question list updated by Prasad Todkari for site 1
+2025-07-11T10:48:27.949Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:48:50.156Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:48:56.751Z - [INFO] - Site question list updated by Prasad Todkari for site 1
+2025-07-11T10:50:39.401Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:52:05.498Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:52:08.919Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:52:55.343Z - [Info] - Fetched all sites by undefined
+2025-07-11T10:53:39.477Z - [Info] - Fetched all sites by undefined
+2025-07-11T11:05:34.463Z - [Info] - Fetched all sites by undefined
+2025-07-11T11:05:39.664Z - [Info] - Fetched all sites by undefined
+2025-07-11T11:07:12.705Z - [Info] - Fetched all sites by undefined
+2025-07-11T11:08:42.425Z - [Info] - Fetched all sites by undefined
+2025-07-11T11:17:52.402Z - [Info] - Fetched all sites by undefined
+2025-07-11T11:20:59.360Z - [Info] - Fetched all sites by undefined
+2025-07-11T11:21:02.401Z - [Info] - Fetched all sites by undefined
+2025-07-11T11:21:37.161Z - [Info] - Fetched all sites by undefined
+2025-07-11T11:21:37.167Z - [Info] - Fetched all categories by undefined
+2025-07-11T11:21:39.081Z - [Info] - Fetched all sites by undefined
+2025-07-12T06:36:13.202Z - [Info] - Fetched all sites by undefined
+2025-07-12T06:36:13.649Z - [Info] - Fetched all sites by undefined
+2025-07-12T06:36:13.678Z - [Info] - Fetched all categories by undefined
+2025-07-12T06:36:14.862Z - [Info] - Fetched all users undefined
+2025-07-12T06:36:15.685Z - [Info] - Fetched all sites by undefined
+2025-07-12T06:36:16.888Z - [Info] - Fetched all sites by undefined
+2025-07-12T06:36:16.889Z - [Info] - Fetched all categories by undefined
+2025-07-12T06:36:17.561Z - [Info] - Fetched all users undefined
+2025-07-12T06:36:33.452Z - [Info] - Fetched all sites by undefined
+2025-07-12T06:36:34.140Z - [Info] - Fetched all sites by undefined
+2025-07-12T06:36:34.140Z - [Info] - Fetched all categories by undefined
+2025-07-12T06:36:35.132Z - [Info] - Fetched all sites by undefined
+2025-07-12T06:36:36.489Z - [Info] - Fetched all users undefined
+2025-07-12T06:41:03.507Z - [Info] - Fetched all sites by undefined
+2025-07-12T06:59:43.966Z - [ERROR] - error while fetching fedbackform Qeustions
+2025-07-12T07:00:07.095Z - [ERROR] - error while fetching fedbackform Qeustions
+2025-07-13T06:58:10.061Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-18T12:15:48.090Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-18T12:25:14.565Z - [Info] - Fetched all sites by undefined
+2025-07-18T12:27:11.058Z - [ERROR] - Login failed: Invalid password for prasad.todkari@afoozo.com
+2025-07-18T12:27:11.058Z - [ERROR] - Login error for prasad.todkari@afoozo.com: Invalid User
+2025-07-18T12:27:14.870Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-18T13:22:31.681Z - [ERROR] - Login failed: Invalid password for prasad.todkari@afoozo.com
+2025-07-18T13:22:31.682Z - [ERROR] - Login error for prasad.todkari@afoozo.com: Invalid User
+2025-07-18T13:22:40.762Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-18T13:30:04.925Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-18T13:30:34.620Z - [ERROR] - Login failed: Invalid password for prasad.todkari@afoozo.com
+2025-07-18T13:30:34.620Z - [ERROR] - Login error for prasad.todkari@afoozo.com: Invalid User
+2025-07-18T13:30:40.944Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-18T15:08:26.246Z - [ERROR] - Login failed: Invalid password for prasad.todkari@afoozo.com
+2025-07-18T15:08:26.252Z - [ERROR] - Login error for prasad.todkari@afoozo.com: Invalid User
+2025-07-18T15:08:29.737Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-19T11:05:29.620Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:05:30.622Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:05:30.683Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:19:00.210Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:19:01.146Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:19:01.180Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:21:47.949Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:21:47.950Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:25:19.945Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:25:19.954Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:30:00.341Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:30:00.342Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:31:18.982Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:31:18.986Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:31:48.913Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:31:48.914Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:33:15.995Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:33:15.997Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:33:26.898Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:33:26.899Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:33:59.979Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:33:59.983Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:34:08.727Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:34:08.728Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:35:25.949Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:35:25.951Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:35:49.870Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:35:49.871Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:36:21.062Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:36:21.064Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:36:49.790Z - [Info] - Fetched all sites by undefined
+2025-07-19T11:36:49.791Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:40:25.810Z - [Info] - Fetched all categories by undefined
+2025-07-19T11:40:25.814Z - [Info] - Fetched all sites by undefined
+2025-07-19T12:00:57.680Z - [Info] - Fetched all categories by undefined
+2025-07-19T12:00:57.683Z - [Info] - Fetched all sites by undefined
+2025-07-19T12:23:13.311Z - [Info] - Fetched all sites by undefined
+2025-07-19T12:23:14.602Z - [Info] - Fetched all sites by undefined
+2025-07-19T12:23:14.671Z - [Info] - Fetched all categories by undefined
+2025-07-19T12:23:16.357Z - [Info] - Fetched all users undefined
+2025-07-19T12:23:17.488Z - [Info] - Fetched all categories by undefined
+2025-07-19T12:23:17.489Z - [Info] - Fetched all sites by undefined
+2025-07-19T12:25:48.791Z - [Info] - Fetched all sites by undefined
+2025-07-19T12:30:34.205Z - [Info] - Fetched all users undefined
+2025-07-19T12:31:51.905Z - [Info] - User Ravi Manchandani updated successfully by undefined
+2025-07-19T12:31:51.929Z - [Info] - Fetched all users undefined
+2025-07-22T15:04:40.336Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-22T15:04:45.314Z - [Info] - Fetched all users undefined
+2025-07-22T15:04:45.319Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:05:19.221Z - [error] - Error editing user: error: column "user_id" does not exist
+2025-07-22T15:05:19.239Z - [Error] - Error editing user: column "user_id" does not exist
+2025-07-22T15:07:49.619Z - [error] - Error editing user: error: column "user_id" does not exist
+2025-07-22T15:07:49.631Z - [Error] - Error editing user: column "user_id" does not exist
+2025-07-22T15:09:22.029Z - [Info] - User Prasad Todkari updated successfully by Prasad Todkari
+2025-07-22T15:09:22.551Z - [Info] - Fetched all users undefined
+2025-07-22T15:09:22.609Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:11:22.137Z - [Info] - User Prasad Todkari updated successfully by Prasad Todkari
+2025-07-22T15:11:22.180Z - [Info] - Fetched all users undefined
+2025-07-22T15:11:22.254Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:22:40.211Z - [Info] - User Prasad Todkari updated successfully by Prasad Todkari
+2025-07-22T15:22:40.240Z - [error] - Error fetching users:error: column usa.user_id does not exist
+2025-07-22T15:22:40.250Z - [Error] - Error fetching users: column usa.user_id does not exist
+2025-07-22T15:22:40.371Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:22:49.845Z - [Info] - User Prasad Todkari updated successfully by Prasad Todkari
+2025-07-22T15:22:49.869Z - [error] - Error fetching users:error: column usa.user_id does not exist
+2025-07-22T15:22:49.872Z - [Error] - Error fetching users: column usa.user_id does not exist
+2025-07-22T15:22:49.952Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:23:58.026Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:23:58.030Z - [Info] - Fetched all categories by undefined
+2025-07-22T15:23:59.193Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:23:59.205Z - [Info] - Fetched all users undefined
+2025-07-22T15:28:37.036Z - [Info] - Fetched all users undefined
+2025-07-22T15:28:37.038Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:28:56.961Z - [Info] - Fetched all users undefined
+2025-07-22T15:28:56.962Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:29:01.934Z - [Info] - Fetched all users undefined
+2025-07-22T15:29:01.935Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:29:06.661Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:29:06.662Z - [Info] - Fetched all categories by undefined
+2025-07-22T15:29:07.650Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:29:07.653Z - [Info] - Fetched all users undefined
+2025-07-22T15:30:52.149Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:30:52.151Z - [Info] - Fetched all users undefined
+2025-07-22T15:31:34.147Z - [Info] - User Prasad Todkari updated successfully by Prasad Todkari
+2025-07-22T15:31:34.164Z - [Info] - Fetched all users undefined
+2025-07-22T15:31:34.232Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:31:47.367Z - [Info] - Fetched all sites by undefined
+2025-07-22T15:31:47.372Z - [Info] - Fetched all categories by undefined
+2025-07-24T14:53:21.820Z - [ERROR] - error while fetching data for 1
+2025-07-28T07:19:22.672Z - [INFO] - Prasad Todkari logged in successfully
