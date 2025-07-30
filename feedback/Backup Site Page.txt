@@ -73,6 +73,7 @@ export default function SiteMaster() {
     setModal({ open: true, mode: 'edit', site });
   };
 
+
   const handleSave = async () => {
     setLoading(true);
     if (!formSite.name.trim()) return;
