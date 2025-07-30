@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const authMiddleware = require('../../middleware/supcop');
-const { getAllSitesController, addSiteController, editSiteController, getAllCategoriesController, getAllUsersController, addNewUserController, editUserController, getSiteQuestionController, selectedQuestionscontroller, getSiteOnlyQController, getSiteNameController } = require('../../controllers/masterController');
+const { getAllSitesController, addSiteController, editSiteController, getAllCategoriesController, getAllUsersController, addNewUserController, editUserController, getSiteQuestionController, selectedQuestionscontroller, getSiteOnlyQController, getSiteNameController, getUserSiteAccess } = require('../../controllers/masterController');
 const requestValidator = require('../../middleware/formValidator');
 
 // Route to get all masters
@@ -26,5 +26,7 @@ router.post('/addSelectedQue', authMiddleware, selectedQuestionscontroller)
 router.get('/siteQuestions', requestValidator, getSiteOnlyQController)
 // Router to Get Site Name
 router.get('/getSiteName', requestValidator, getSiteNameController)
+// router to get Users Site Access
+router.get(`/getUserAccess`, authMiddleware, getUserSiteAccess)
 
 module.exports = router;

@@ -79,7 +79,7 @@ function App() {
           {/* Routes accessible to all authenticated users */}
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/feedback" element={<Feedback />} />
-          <Route path='/questions' element={<QuestionSelector />} />
+          <Route path='/questions' element={<QuestionSelector userRole={user.role}/>} />
 
           {/* Role-protected routes */}
           <Route element={<ProtectedRoute allowedRoles={['admin']} userRole={user.role} />}>

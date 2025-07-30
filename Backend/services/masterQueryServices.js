@@ -83,6 +83,16 @@ const getAllUsersQuery = async () => {
     }
 }  
 
+const getUserAccessServices = async (user_id) => {
+    try {
+        const resp = await crmPool.query('select site_id from user_site_access WHERE users_id = $1', [user_id])
+        return resp.rows
+    } catch (error) {
+        logMessage(`Error while getting the user Access Details: ${error}`, 'ERROR')
+        throw new Error
+    }
+}
+
 // const addNewUserQuery = async (userData) => {  
 //     const userId = userData.userId;
 //     try {
@@ -310,5 +320,6 @@ module.exports = {
     getSelectedQuestionsQuery,
     updateSelectedQuestions,
     getSiteFBQuestionQuery,
-    getSiteNameQuery
+    getSiteNameQuery,
+    getUserAccessServices
 };

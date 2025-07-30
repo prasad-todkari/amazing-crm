@@ -10,7 +10,7 @@ export default function Sidebar({ userRole, isCollapsed, onToggle }) {
       title: 'Dashboard',
       icon: 'ri-dashboard-3-line',
       href: '/dashboard',
-      roles: ['admin', 'moderator', 'user']
+      roles: ['admin', 'moderator', 'manager']
     },
     {
       title: 'Feedback',

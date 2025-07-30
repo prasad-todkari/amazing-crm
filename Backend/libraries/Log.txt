@@ -385,3 +385,48 @@
 2025-07-30T05:06:35.415Z - [ERROR] - error while getting Guest Data
 2025-07-30T05:07:29.605Z - [ERROR] - error while getting Guest Data
 2025-07-30T05:14:09.725Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-30T05:46:54.626Z - [ERROR] - Login failed: No such user cafequantum@afoozo.com
+2025-07-30T05:46:54.627Z - [ERROR] - Login error for cafequantum@afoozo.com: Invalid User
+2025-07-30T05:47:00.466Z - [ERROR] - Login failed: No such user cafequantum@afoozo.com
+2025-07-30T05:47:00.467Z - [ERROR] - Login error for cafequantum@afoozo.com: Invalid User
+2025-07-30T05:47:08.004Z - [ERROR] - Login failed: Invalid password for cafe.quantum@afoozo.com
+2025-07-30T05:47:08.004Z - [ERROR] - Login error for cafe.quantum@afoozo.com: Invalid User
+2025-07-30T05:47:11.868Z - [ERROR] - Login failed: Invalid password for cafe.quantum@afoozo.com
+2025-07-30T05:47:11.869Z - [ERROR] - Login error for cafe.quantum@afoozo.com: Invalid User
+2025-07-30T05:47:20.835Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-30T05:47:24.138Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:14:05.033Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:14:24.901Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:20:58.103Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:21:08.825Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:21:41.996Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-30T06:21:42.071Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:23:32.124Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:23:32.125Z - [Info] - Fetched all categories by undefined
+2025-07-30T06:23:40.046Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:24:12.263Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:25:14.662Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:25:21.718Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:26:02.827Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:27:56.965Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:29:18.993Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:31:38.976Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:31:48.320Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:37:25.021Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:37:33.959Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:37:42.223Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:37:57.703Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:39:59.102Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:40:09.632Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:42:31.666Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:42:37.486Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:45:46.989Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:46:11.755Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:46:58.016Z - [Info] - Fetched all sites by undefined
+2025-07-30T06:51:17.226Z - [Info] - Fetched all sites by undefined
+2025-07-30T07:00:51.873Z - [Info] - Fetched all sites by undefined
+2025-07-30T07:00:52.551Z - [Info] - Fetched all sites by undefined
+2025-07-30T07:06:46.074Z - [Info] - Fetched all sites by undefined
+2025-07-30T07:07:22.097Z - [Info] - Fetched all sites by undefined
+2025-07-30T07:07:34.968Z - [Info] - Fetched all sites by undefined
+2025-07-30T07:11:25.016Z - [Info] - Fetched all sites by undefined

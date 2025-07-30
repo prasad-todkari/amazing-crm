@@ -1,5 +1,5 @@
 const { logMessage } = require("../libraries/logger");
-const { getAllSitesQuery, addSiteQuery, editSiteQuery, getAllCategoriesQuery, getAllUsersQuery, addNewUserQuery, editUserQuery, getSiteQuestionQuery, getSelectedQuestionsQuery, updateSelectedQuestions, getSiteFBQuestionQuery, getSiteNameQuery } = require("../services/masterQueryServices");
+const { getAllSitesQuery, addSiteQuery, editSiteQuery, getAllCategoriesQuery, getAllUsersQuery, addNewUserQuery, editUserQuery, getSiteQuestionQuery, getSelectedQuestionsQuery, updateSelectedQuestions, getSiteFBQuestionQuery, getSiteNameQuery, getUserAccessServices } = require("../services/masterQueryServices");
 
 
 const getAllUsersController = async (req, res) => {
@@ -277,6 +277,23 @@ const getSiteNameController = async (rec, res) => {
     }
 }
 
+const getUserSiteAccess = async (req, res) => {
+    const user_id = req.user.data.userId;
+    try {
+        const siteAccess = await getUserAccessServices(user_id)
+        res.status(200).json({
+            status: 'success',
+            message: 'fetched user access',
+            data: siteAccess
+        })
+    } catch (error) {
+       res.status(500).json({
+           status: 'Error',
+            message: error.message || 'error while fetching user access' 
+        })  
+    }
+}
+
 module.exports = {
     getAllUsersController,
     addSiteController,
@@ -288,5 +305,6 @@ module.exports = {
     getSiteQuestionController,
     selectedQuestionscontroller,
     getSiteOnlyQController,
-    getSiteNameController
+    getSiteNameController,
+    getUserSiteAccess
 };

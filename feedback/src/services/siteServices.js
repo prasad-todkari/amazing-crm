@@ -69,3 +69,13 @@ export const getSiteName = async (siteId) => {
     throw error;
   }
 }
+
+export const getUserAccess = async () => {
+  try {
+    const response = await axiosInstance.get('/api/master/getUserAccess')
+    return response.data
+  } catch (error) {
+    console.error('error while getting user Access:', error)
+    throw new Error()
+  }
+}

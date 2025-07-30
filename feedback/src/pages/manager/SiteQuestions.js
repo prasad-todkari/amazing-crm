@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { getAllSites, getQuestions, selectedQuestions } from "../../services/siteServices";
+import { getAllSites, getQuestions, getUserAccess, selectedQuestions } from "../../services/siteServices";
 import ConfirmationModal from "../../components/common/ConfirmationModal";
 import { ToastSuccess, ToastError } from '../../components/common/Toast';
+import Select from 'react-select';
 
-const QuestionSelector = () => {
+const QuestionSelector = ({ userRole }) => {
   const [siteId, setSiteId] = useState("");
   const [siteName, setSiteName] = useState('');
   const [availableSites, setAvailableSites] = useState([]);
@@ -11,19 +12,42 @@ const QuestionSelector = () => {
   const [filteredQuestions, setFilteredQuestions] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
-  const [confirmationModal, setConfirmationModal] = useState(false)
-  const [message, setMessage] = useState('')
-  const [toastMessage, setToastMessage] = useState('')
-  const [toastError, setToastError] = useState('')
+  const [confirmationModal, setConfirmationModal] = useState(false);
+  const [message, setMessage] = useState('');
+  const [toastMessage, setToastMessage] = useState('');
+  const [toastError, setToastError] = useState('');
+  const [userSiteAccess, setUserSiteAccess] = useState([]);
+  const [filteredSites, setFilteredSites] = useState([]);
 
-  // Fetch available sites on mount
+  // Fetch available sites and user access on mount
   useEffect(() => {
-    const resp = async () => {
-      const sitelist = await getAllSites()
-      setAvailableSites(sitelist.data)
-    }
-    resp()
+    const fetchData = async () => {
+      const sitelist = await getAllSites();
+      setAvailableSites(sitelist.data);
+      console.log(sitelist);
+
+      const siteAccess = await getUserAccess();
+      console.log(siteAccess);
+      setUserSiteAccess(siteAccess.data);
+    };
+    fetchData();
   }, []);
+
+  // Filter available sites based on user access
+ useEffect(() => {
+    if (availableSites.length > 0) {
+      let sitesToDisplay = availableSites;
+      // If the user is a manager, filter the sites based on user access
+      if (userRole === 'manager' && userSiteAccess.length > 0) {
+        sitesToDisplay = availableSites.filter(site =>
+          userSiteAccess.some(access => access.site_id === site.site_id)
+        );
+      }
+      setFilteredSites(sitesToDisplay);
+    }
+  }, [availableSites, userSiteAccess, userRole]);
+  
+  console.log(filteredSites);
 
   // Fetch questions when site is selected and "Search" is clicked
   const fetchQuestions = async () => {
@@ -49,16 +73,16 @@ const QuestionSelector = () => {
   // Handle Save
   const handleSave = async () => {
     const selectedIds = questions.filter(q => q.selected).map(q => q.question_id);
-    const saveselected = await selectedQuestions({ siteId, selectedIds })
+    const saveselected = await selectedQuestions({ siteId, selectedIds });
     if (saveselected.data.status === 'success') {
-      setToastMessage('Updated Successfully')
+      setToastMessage('Updated Successfully');
     } else {
-      setToastError('error while adding records')
+      setToastError('Error while adding records');
     }
     alert("Saved!");
     setQuestions([]);
     setFilteredQuestions([]);
-    setConfirmationModal(false)
+    setConfirmationModal(false);
   };
 
   // Handle search input
@@ -70,6 +94,17 @@ const QuestionSelector = () => {
     );
   };
 
+  // Prepare options for react-select
+  const options = filteredSites.map(site => ({
+    value: site.site_id,
+    label: site.site_name
+  }));
+
+  // Handle site selection
+  const handleChangeSite = (selectedOption) => {
+    setSiteId(selectedOption.value);
+    setSiteName(selectedOption.label);
+  };
 
   return (
     <div className="max-w-6xl mx-auto p-3 bg-white rounded shadow">
@@ -79,22 +114,14 @@ const QuestionSelector = () => {
       <div className="sticky top-0 z-10 bg-white pb-4 pt-4 shadow-sm">
         <div className="flex flex-col md:flex-row md:items-center gap-4">
           {/* Site dropdown */}
-          <select
-            value={siteId}
-            onChange={(e) => {
-              setSiteId(e.target.value);
-              const selectedOption = e.target.options[e.target.selectedIndex];
-              setSiteName(selectedOption.text);
-            }}
-            className="border px-4 py-2 rounded w-full md:w-64"
-          >
-            <option value="">-- Select Site --</option>
-            {availableSites.map(site => (
-              <option key={site.site_id} value={site.site_id}>
-                {site.site_name}
-              </option>
-            ))}
-          </select>
+          <Select
+            value={options.find(option => option.value === siteId)} 
+            onChange={handleChangeSite} 
+            options={options} 
+            className="basic-single"
+            classNamePrefix="select"
+            placeholder="-- Select Site --"
+          />
 
           {/* Search button */}
           <button
@@ -117,26 +144,11 @@ const QuestionSelector = () => {
         </div>
       </div>
 
-
       {/* Questions list */}
       {loading ? (
         <div className="text-center mt-10">Loading...</div>
       ) : (
         <div className="max-h-[70vh] overflow-y-auto">
-          {/* <ul className="space-y-2">
-          {filteredQuestions.map(q => (
-            <li key={q.question_id} className="flex items-center gap-4 text-small border p-2 rounded hover:shadow">
-             <input
-                type="checkbox"
-                checked={q.selected}
-                onChange={() => handleChange(q.question_id)}
-                className="w-5 h-5 text-blue-600 focus:ring-blue-500"
-              />
-              <span className="text-gray-700">{q.question_text}</span>
-            </li>
-          ))}
-        </ul> */}
-
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {filteredQuestions.map(q => (
               <li key={q.question_id} className="flex items-center gap-4 border p-3 rounded hover:shadow">
