@@ -87,8 +87,9 @@ const getMostAnsQuesController = async (rec, res) => {
 }
 
 const getFeedbackController = async (rec, res) => {
+    const { userId, role } = rec.user.data;
     try {
-        const responce = await getFeedbackDetailQuery();
+        const responce = await getFeedbackDetailQuery(userId, role);
         res.status(200).json({
             status: 'success',
             message: 'data fetched Successfully',

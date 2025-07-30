@@ -16,7 +16,7 @@ export default function Sidebar({ userRole, isCollapsed, onToggle }) {
       title: 'Feedback',
       icon: 'ri-feedback-line',
       href: '/feedback',
-      roles: ['admin', 'moderator', 'user'],
+      roles: ['admin', 'moderator', 'manager'],
       badge: ''
     },
     {

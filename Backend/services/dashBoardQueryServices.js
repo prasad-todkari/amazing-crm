@@ -10,7 +10,6 @@ const getDashKpiService = async (userId, role) => {
                 `SELECT site_id FROM user_site_access WHERE users_id = $1`,
                 [userId]
             );
-            console.log(siteRes.rows);
             siteIds = siteRes.rows.map(row => row.site_id);
         }
         const siteFilterSQL = siteIds.length
@@ -203,7 +202,19 @@ const getMostAnsQuesQuery = () => {
     }
 }
 
-const getFeedbackDetailQuery = async () => {
+const getFeedbackDetailQuery = async (userId, role) => {
+    let siteIds = [];
+
+    if (role === 'manager') {
+        const siteRes = await crmPool.query(
+        `SELECT site_id FROM user_site_access WHERE users_id = $1`,
+        [userId]
+        );
+        siteIds = siteRes.rows.map(row => row.site_id);
+    }
+
+    const siteFilterSQL = siteIds.length ? `WHERE f.site_id = ANY($1)` : '';
+
     try {
         const result = await crmPool.query(`SELECT 
                     g.guestname AS user, 
@@ -221,45 +232,46 @@ const getFeedbackDetailQuery = async () => {
                     feedback_ratings d ON f.feedback_id = d.feedback_id
                 LEFT JOIN 
                     sites s ON f.site_id = s.site_id
+                ${siteFilterSQL}
                 GROUP BY 
                     g.guestname, g.guestemail, s.site_name, f.satisfaction, f.suggestions, f.submitted_at
                 ORDER BY 
-                    f.submitted_at DESC;`)
+                    f.submitted_at DESC;`, siteIds.length ? [siteIds] : [])
         return result
     } catch (error) {
         logMessage('error whle getting Feedack details', 'ERROR')
     }
 }
 
-const fetchFeedbackData = async () => {
-    try {
-        const result = await crmPool.query(`SELECT 
-                    g.guestname AS user, 
-                    g.guestemail AS email,
-                    s.site_name AS site,
-                    f.satisfaction AS status,
-                    f.suggestions AS comment,
-                    f.submitted_at AS date, 
-                    ROUND(AVG(d.rating), 2) AS rating
-                FROM 
-                    feedback_master f
-                LEFT JOIN 
-                    guest_master g ON f.guest_id = g.guestid
-                LEFT JOIN 
-                    feedback_ratings d ON f.feedback_id = d.feedback_id
-                LEFT JOIN 
-                    sites s ON f.site_id = s.site_id
-                WHERE
-				    f.submitted_at >= '2025-07-12'
-                GROUP BY 
-                    g.guestname, g.guestemail, s.site_name, f.satisfaction, f.suggestions, f.submitted_at
-                ORDER BY 
-                    f.submitted_at DESC;`)
-        return result.rows
-    } catch (error) {
-        logMessage('error whle getting Feedack details', 'ERROR')
-    }
-}
+// const fetchFeedbackData = async () => {
+//     try {
+//         const result = await crmPool.query(`SELECT 
+//                     g.guestname AS user, 
+//                     g.guestemail AS email,
+//                     s.site_name AS site,
+//                     f.satisfaction AS status,
+//                     f.suggestions AS comment,
+//                     f.submitted_at AS date, 
+//                     ROUND(AVG(d.rating), 2) AS rating
+//                 FROM 
+//                     feedback_master f
+//                 LEFT JOIN 
+//                     guest_master g ON f.guest_id = g.guestid
+//                 LEFT JOIN 
+//                     feedback_ratings d ON f.feedback_id = d.feedback_id
+//                 LEFT JOIN 
+//                     sites s ON f.site_id = s.site_id
+//                 WHERE
+// 				    f.submitted_at >= '2025-07-12'
+//                 GROUP BY 
+//                     g.guestname, g.guestemail, s.site_name, f.satisfaction, f.suggestions, f.submitted_at
+//                 ORDER BY 
+//                     f.submitted_at DESC;`)
+//         return result.rows
+//     } catch (error) {
+//         logMessage('error whle getting Feedack details', 'ERROR')
+//     }
+// }
 
 module.exports = {
     getDashKpiService,
@@ -268,5 +280,5 @@ module.exports = {
     getRecentFeedback,
     getMostAnsQuesQuery,
     getFeedbackDetailQuery,
-    fetchFeedbackData
+    // fetchFeedbackData
 }

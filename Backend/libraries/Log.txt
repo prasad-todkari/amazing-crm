@@ -430,3 +430,22 @@
 2025-07-30T07:07:22.097Z - [Info] - Fetched all sites by undefined
 2025-07-30T07:07:34.968Z - [Info] - Fetched all sites by undefined
 2025-07-30T07:11:25.016Z - [Info] - Fetched all sites by undefined
+2025-07-30T08:42:58.307Z - [Info] - Fetched all sites by undefined
+2025-07-30T08:43:51.510Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-30T08:43:53.087Z - [Info] - Fetched all sites by undefined
+2025-07-30T08:43:53.597Z - [Info] - Fetched all sites by undefined
+2025-07-30T08:43:53.601Z - [Info] - Fetched all categories by undefined
+2025-07-30T08:43:54.547Z - [Info] - Fetched all sites by undefined
+2025-07-30T08:43:54.563Z - [Info] - Fetched all users undefined
+2025-07-30T08:44:16.568Z - [INFO] - Akshay logged in successfully
+2025-07-30T08:44:22.279Z - [Info] - Fetched all sites by undefined
+2025-07-30T08:44:55.039Z - [ERROR] - Login failed: Invalid password for prasad.todkari@afoozo.com
+2025-07-30T08:44:55.040Z - [ERROR] - Login error for prasad.todkari@afoozo.com: Invalid User
+2025-07-30T08:44:58.871Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-30T08:45:04.787Z - [Info] - Fetched all sites by undefined
+2025-07-30T08:45:04.789Z - [Info] - Fetched all users undefined
+2025-07-30T08:45:20.214Z - [Info] - Fetched all sites by undefined
+2025-07-30T08:50:48.455Z - [Info] - Fetched all sites by undefined
+2025-07-30T08:50:49.991Z - [Info] - Fetched all sites by undefined
+2025-07-30T08:50:50.060Z - [Info] - Fetched all categories by undefined
+2025-07-30T08:50:54.108Z - [Info] - Fetched all sites by undefined
