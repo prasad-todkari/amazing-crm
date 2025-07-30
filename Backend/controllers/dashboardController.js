@@ -1,8 +1,10 @@
 const { getDashKpiService, getDayWiseQuery, getSiteWiseQuery, getRecentFeedback, getMostAnsQuesQuery, getFeedbackDetailQuery } = require("../services/dashBoardQueryServices");
 
 const getDashKpicontroller = async (rec, res) => {
+    const {userId, role} = rec.user.data
+    
     try {
-        const result = await getDashKpiService();
+        const result = await getDashKpiService(userId, role);
         res.status(200).json({
             status: 'success',
             message: 'data fetched Successfully',

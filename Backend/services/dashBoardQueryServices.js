@@ -1,8 +1,22 @@
 const { crmPool } = require('../libraries/database');
 const { logMessage } = require('../libraries/logger');
 
-const getDashKpiService = async () => {
+const getDashKpiService = async (userId, role) => {
     try {
+         let siteIds = [];
+
+         if (role === 'manager') {
+            const siteRes = await crmPool.query(
+                `SELECT site_id FROM user_site_access WHERE users_id = $1`,
+                [userId]
+            );
+            console.log(siteRes.rows);
+            siteIds = siteRes.rows.map(row => row.site_id);
+        }
+        const siteFilterSQL = siteIds.length
+            ? `AND f.site_id = ANY($1)`
+            : '';
+
         const responce = await crmPool.query(`WITH date_ranges AS (
                 SELECT
                     current_date - interval '30 days' AS current_start,
@@ -20,7 +34,8 @@ const getDashKpiService = async () => {
                     
                     COUNT(*) FILTER (WHERE satisfaction = 'satisfied' AND submitted_at BETWEEN dr.current_start AND dr.current_end) AS current_satisfied,
                     COUNT(*) FILTER (WHERE satisfaction = 'satisfied' AND submitted_at BETWEEN dr.prev_start AND dr.prev_end) AS prev_satisfied
-                FROM feedback_master, date_ranges dr
+                FROM feedback_master AS f, date_ranges dr
+                WHERE 1=1 ${siteFilterSQL}
                 ),
                 ratings_avg AS (
                 SELECT
@@ -29,6 +44,7 @@ const getDashKpiService = async () => {
                 FROM feedback_ratings r
                 JOIN feedback_master f ON f.feedback_id = r.feedback_id
                 CROSS JOIN date_ranges dr
+                WHERE 1=1 ${siteFilterSQL}
                 )
 
                 SELECT * FROM (
@@ -93,7 +109,7 @@ const getDashKpiService = async () => {
                     ) AS delta
                 FROM feedback_counts fc
                 ) AS metrics;
-            `)
+            `, siteIds.length ? [siteIds] : [])
         return responce
     } catch (error) {
         logMessage('error while getting Guest Data', 'ERROR')

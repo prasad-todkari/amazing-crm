@@ -370,3 +370,18 @@
 2025-07-22T15:31:47.372Z - [Info] - Fetched all categories by undefined
 2025-07-24T14:53:21.820Z - [ERROR] - error while fetching data for 1
 2025-07-28T07:19:22.672Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-30T04:49:48.656Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-30T04:59:08.970Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-30T04:59:11.135Z - [Info] - Fetched all sites by undefined
+2025-07-30T04:59:11.139Z - [Info] - Fetched all users undefined
+2025-07-30T05:00:12.723Z - [Info] - User Prasad Todkari added a new user: Akshay
+2025-07-30T05:00:12.745Z - [Info] - Fetched all users undefined
+2025-07-30T05:00:12.806Z - [Info] - Fetched all sites by undefined
+2025-07-30T05:00:21.784Z - [INFO] - Akshay logged in successfully
+2025-07-30T05:00:21.838Z - [ERROR] - error while getting Guest Data
+2025-07-30T05:01:06.382Z - [ERROR] - error while getting Guest Data
+2025-07-30T05:01:49.973Z - [ERROR] - error while getting Guest Data
+2025-07-30T05:05:37.827Z - [ERROR] - error while getting Guest Data
+2025-07-30T05:06:35.415Z - [ERROR] - error while getting Guest Data
+2025-07-30T05:07:29.605Z - [ERROR] - error while getting Guest Data
+2025-07-30T05:14:09.725Z - [INFO] - Prasad Todkari logged in successfully
