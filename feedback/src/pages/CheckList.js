@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import useQuery from "../hooks/useQuery";
-import { getFormData } from "../services/ChekListServices";
+import { getFormData, submitChecklist } from "../services/ChekListServices";
 import SectionProgress from "../components/CheckList/SectionProgress";
 import QuestionItem from "../components/CheckList/QuestionItem";
 import NavigationButtons from "../components/CheckList/NavigationButtons";
@@ -20,14 +20,12 @@ const ChecklistForm = () => {
   const storageKey = `checklist_${formId}`;
 
 useEffect(() => {
-  // Step 1: Load saved state BEFORE anything else
   const saved = localStorage.getItem(storageKey);
   if (saved) {
     try {
       const parsed = JSON.parse(saved);
       if (parsed.responses) setResponses(parsed.responses);
       if (typeof parsed.sectionIndex === "number") setSectionIndex(parsed.sectionIndex);
-      console.log("✅ Restored from localStorage", parsed);
     } catch (e) {
       console.error("Failed to parse saved data", e);
     }
@@ -35,7 +33,6 @@ useEffect(() => {
 }, [storageKey]);
 
 useEffect(() => {
-  // Step 2: Fetch form from API (title + questions)
   const loadForm = async () => {
     try {
       const result = await getFormData({ formId, siteId });
@@ -51,19 +48,21 @@ useEffect(() => {
 }, [formId, siteId]);
 
 useEffect(() => {
-  // Step 3: Persist any changes to localStorage
   if (!formId) return;
   const dataToSave = {
     responses,
     sectionIndex
   };
   localStorage.setItem(storageKey, JSON.stringify(dataToSave));
-  console.log("💾 Saved to localStorage:", dataToSave);
 }, [responses, sectionIndex, formId, storageKey]);
 
-  const sections = [...new Set(questions.map(item => item.section))];
-  const currentSection = sections[sectionIndex]  || sections[0];
-  const sectionQuestions = questions.filter(q => q.section === currentSection);
+  const sections = Array.from(
+    new Map(questions.map(q => [q.sect_id, { id: q.sect_id, name: q.section }])).values()
+  );
+  
+  const currentSection = sections[sectionIndex]?.name || sections[0]?.name;
+  const sectionQuestions = questions.filter(q => q.sect_id === sections[sectionIndex]?.id);
+  
 
   const handleResponse = (questionId, value) => {
     setResponses(prev => ({
@@ -109,7 +108,7 @@ useEffect(() => {
     setSectionIndex(prev => prev + 1);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const result = validateSection();
     if (!result.valid) {
       alert(result.message);
@@ -142,9 +141,15 @@ useEffect(() => {
       payload.totalScore += score;
     });
 
-    console.log("Payload to submit:", payload);
-    alert("Form submitted successfully!");
+    try {
+      const res = await submitChecklist(payload)
+      alert("Form submitted successfully!", res);
+    } catch (error) {
+      alert(error.message)
+    }
+    
     localStorage.removeItem(storageKey);
+    window.location.href = `/`;
   };
 
   const totalQuestions = questions.length;
@@ -194,6 +199,5 @@ useEffect(() => {
     </div>
   );
 };
-
 
 export default ChecklistForm;

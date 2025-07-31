@@ -449,3 +449,19 @@
 2025-07-30T08:50:49.991Z - [Info] - Fetched all sites by undefined
 2025-07-30T08:50:50.060Z - [Info] - Fetched all categories by undefined
 2025-07-30T08:50:54.108Z - [Info] - Fetched all sites by undefined
+2025-07-30T14:01:52.903Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-30T14:02:00.055Z - [Info] - Fetched all sites by undefined
+2025-07-30T14:02:28.073Z - [Info] - Fetched all users undefined
+2025-07-30T14:02:28.140Z - [Info] - Fetched all sites by undefined
+2025-07-31T11:05:26.129Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-31T11:18:32.828Z - [ERROR] - error while fetching details of filled checklist
+2025-07-31T11:19:08.122Z - [ERROR] - error while fetching details of filled checklist
+2025-07-31T11:40:37.185Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-31T11:40:37.440Z - [ERROR] - error while fetching details of filled checklist
+2025-07-31T11:40:37.451Z - [ERROR] - error while fetching details of filled checklist
+2025-07-31T12:04:12.158Z - [ERROR] - error while fetching data for 1
+2025-07-31T12:09:22.659Z - [INFO] - Prasad Todkari logged in successfully
+2025-07-31T12:09:27.884Z - [ERROR] - error while fetching data for 1
+2025-07-31T13:55:41.246Z - [ERROR] - Error while inserting data into checklist response table
+2025-07-31T13:57:13.315Z - [ERROR] - Error while inserting data into checklist response table
+2025-07-31T14:52:40.603Z - [INFO] - Prasad Todkari logged in successfully
