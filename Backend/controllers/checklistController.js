@@ -18,6 +18,7 @@ const getChecklistdataController = async (req, res) => {
 }
 
 const getDayChecklistController = async (req, res) => {
+    console.log(req.user)
     const user_id = req.user.data.userId;
 
     try {
